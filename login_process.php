@@ -42,39 +42,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             header("Location: dashboard.php");
             exit();
         } else {
-            echo "<p style='color:red;'>Mot de passe incorrect.</p>";
+            echo "Mot de passe incorrect.";
         }
     } else {
-        echo "<p style='color:red;'>Aucun utilisateur trouvé avec cet email.</p>";
+        echo "Aucun utilisateur trouvé avec cet email.";
     }
 }
 
 $pdo = null;
 ?>
-<!DOCTYPE html>
-<<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title></title>
-</head>
-<body>
-<?php include 'header.php'; ?>
-
-<h2>Connexion</h2>
-<form action="login_process.php" method="post">
-    <label for="mail">Email:</label>
-    <input type="email" name="mail" required>
-    <br>
-    <label for="mdp">Mot de passe:</label>
-    <input type="password" name="mdp" required>
-    <br>
-    <input type="submit" value="Se connecter">
-</form>
-
-<p>Vous n'avez pas de compte ? <a href="register.php">Inscrivez-vous ici</a></p>
-<!-- <p><a href="index.php">Retour à l'accueil</a></p> -->
-    <?php include 'footer.php'?>
-</body>
-</html>

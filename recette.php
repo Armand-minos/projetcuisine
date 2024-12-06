@@ -13,7 +13,16 @@ try {
     $recettes = []; 
 }
 ?>
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <?php include 'header.php'?>
 <main>
     <h1>Liste des recettes</h1>
     <?php if ($recettes): ?>
@@ -21,10 +30,12 @@ try {
             <?php foreach ($recettes as $recette): ?>
                 <li>
                     <h2><?php echo htmlspecialchars($recette['nom']); ?></h2>
-                    <?php if ($recette['./images']): ?>
-                        <img src="<?php echo htmlspecialchars($recette['./images']); ?>" alt="<?php echo htmlspecialchars($recette['nom']); ?>">
+                    <?php if (!empty($recette['image_url'])): ?>
+                        <img src="\projet-1\recette php\projetcuisine\assets\images\<?php echo htmlspecialchars($recette['image_url']); ?>" alt="<?php echo htmlspecialchars($recette['nom']); ?>">
                     <?php endif; ?>
                     <p>Difficulté: <?php echo htmlspecialchars($recette['id_difficulte']); ?></p>
+                    
+                    <p>Iingrédients: <?php echo htmlspecialchars($recette['id_ingredient']); ?></p>
                 </li>
             <?php endforeach; ?>
         </ul>
@@ -32,4 +43,5 @@ try {
         <p>Aucune recette trouvée.</p>
     <?php endif; ?>
 </main>
-
+<?php include 'footer.php'?>
+</body>
