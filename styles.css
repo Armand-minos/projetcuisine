@@ -1,124 +1,291 @@
-body {
+
+body, h1, h2, h3, p {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background-image: url('C:\wamp64\www\projet-1\recette php\projetcuisine\images');
-    background-size: cover; 
-    background-position: center; 
-    color: white; 
+    padding: 0;
+    font-family: 'Arial', sans-serif;
 }
 
-img {
-    width: 100px; 
-    height: 100px;
+body {
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
 }
 
+h2 {
+    text-align: center;
+}
+
+/* styles.css */
+
+nav {
+    background-color: #333; /* Couleur de fond de la navigation */
+    padding: 10px; /* Espacement autour de la navigation */
+}
+
+nav ul {
+    list-style-type: none; /* Supprime les puces de la liste */
+    margin: 0; /* Supprime la marge par défaut */
+    padding: 0; /* Supprime le remplissage par défaut */
+    display: flex; /* Utilise Flexbox pour aligner les éléments */
+    justify-content: flex-end; /* Aligne les éléments à droite */
+}
 
 nav ul li {
-    display: inline; 
-    margin-left: 20px;
+    margin-left: 20px; /* Espace entre les éléments de la liste */
 }
 
-nav ul{
-    list-style-type: none;
-    text-align: right;
-    background-color: rgba(0, 0, 0, 0.7); 
-    padding: 10px;
-}
 nav ul li a {
-    text-decoration: none; 
-    color: rgb(255, 255, 255);          
+    color: rgb(0, 0, 0); /* Couleur du texte des liens */
+    text-decoration: none; /* Supprime le soulignement des liens */
+    padding: 5px 10px; /* Espacement autour des liens */
+    transition: background-color 0.3s; /* Transition pour l'effet de survol */
 }
+
 nav ul li a:hover {
-    color: blue;          
+    background-color: #03ff64; /* Couleur de fond au survol */
+}
+
+/* Style du formulaire de recherche */
+.recherche {
+    margin: 20px auto;
+    max-width: 600px;
+}
+
+.recherche input[type="text"] {
+    width: 70%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.recherche button {
+    padding: 10px 15px;
+    border: none;
+    background-color: #333;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.recherche button:hover {
+    background-color: #555;
 }
 
 
-header {
+
+.spag{
+    max-width: 650px; 
+    height: auto; /* La hauteur s'ajuste automatiquement pour maintenir le ratio */
+    border-radius: 8px; /* Coins arrondis */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre portée */
+    margin: 20px auto; /* Marges en haut et en bas, centré horizontalement */
+    display: block; /* Affiche l'image comme un bloc */
+}
+
+.li-ingredient {
     text-align: center;
-    padding: 50px;
-    background-color: orange; 
 }
 
-@font-face {
-    font-family: 'CustomFont'; /* Name you want to use for the font */
-    src: url('./assets/police/BunchBlossomsPersonalUse-0nA4.ttf') format('truetype'); /* Path to the font file */
-    font-weight: normal; /* You can set this to bold, normal, etc. */
-    font-style: normal; /* You can set this to italic, normal, etc. */
-}
-
-h1 {
-    text-align: center;
-    font-family: 'CustomFont', sans-serif; /* Use the custom font for h1 */
-    font-size: 2.5em; /* Example font size */
-    color: #333; /* Example text color */
-}
-
-h2, h3 {
-    margin: 0; 
-}
-
+/* Style du carousel */
 .carousel {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding: 20px;
+    margin: 20px;
 }
 
 .recipe {
-    background-color: rgba(255, 255, 255, 0.8); 
-    border-radius: 8px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
     margin: 10px;
     padding: 15px;
-    width: 200px; 
+    width: 250px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.recipe:hover {
+    transform: scale(1.05);
+}
+
+.recipe img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+.recipe h3 {
+    margin: 10px 0;
+    font-size: 1.2em;
+}
+
+.recipe p {
+    font-size: 0.9em;
+    color: #666;
+}
+
+/* Style des liens */
+a {
+    text-decoration: none;
+    color: #4CAF50;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Style du bouton de don */
+.don-btn {
+    display: block;
     text-align: center;
+    margin: 20px auto;
 }
 
-
-/* formulaire */
-
-input[type="text"],
-input[type="email"],
-input[type="password"] {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-input[type="checkbox"] {
-    margin-right: 5px;
-}
-
-button {
-    background: #007bff;
-    color: white;
+.don-btn button {
+    padding: 10px 20px;
     border: none;
-    padding: 10px;
-    border-radius: 4px;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
     cursor: pointer;
-    font-size: 16px;
-    width: 100%;
+    transition: background-color 0.3s;
 }
 
-button:hover {
-    background: #0056b3;
+.don-btn button:hover {
+    background-color: #45a049;
 }
 
-.error {
-    color: red;
-    margin-top: 10px;
-}
-
-.success {
-    color: green;
-    margin-top: 10px;
-}
-
-
-
+/* Style du footer */
 footer {
     text-align: center;
     padding: 20px;
-    background-color: rgba(0, 0, 0, 0.7); 
+    background-color: #333;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* notation */
+h3 {
+    text-align: center;
+    color: lightslategray;
+}
+
+.stars {
+    margin: 50px;
+    text-align: center;
+}
+
+.stargrey {
+    color: #96969d;
+}
+
+.yellow {
+    color: #fedc18;
+}
+
+.star:hover {
+    cursor: pointer;
+}
+
+
+
+/* recette.php */
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background: #fff;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    margin: 0 0 10px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.logo {
+    max-width: 150px; 
+    height: auto; 
+}
+
+.title {
+    margin-top: 10px; 
+    font-size: 2em; 
+    color: #fff; 
+}
+
+p {
+    margin: 5px 0;
+}
+
+/* container */
+.container {
+    display: flex;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    box-sizing: border-box;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #333333;
+}
+
+input [type='email'],
+input [type='password'] {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+input [type="submit"] {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 15px;
+    }
 }

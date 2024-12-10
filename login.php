@@ -56,13 +56,20 @@ $pdo = null;
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
     <title></title>
 </head>
 <body>
+<a href="don.php" class="don-btn">
+        <button>Faire un Don</button>
+    </a>
+    
+    <img src="./assets/images/pngegg.png" alt="logo" class="logo"><h1>1-Recette</h1>
 <?php include 'header.php'; ?>
 
 <h2>Connexion</h2>
+<div class="container">
 <form action="login_process.php" method="post">
     <label for="mail">Email:</label>
     <input type="email" name="mail" required>
@@ -72,6 +79,10 @@ $pdo = null;
     <br>
     <input type="submit" value="Se connecter">
 </form>
+</div>
+
+
+
 
 <p>Vous n'avez pas de compte ? <a href="register.php">Inscrivez-vous ici</a></p>
 <!-- <p><a href="index.php">Retour à l'accueil</a></p> -->
